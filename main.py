@@ -11,7 +11,9 @@ def num_to_digit_rec(num, base):
    l.reverse()
    return 1
   else:
-    return list(num_to_digit_rec(num//base, base)) + [num % base]
+    t = num_to_digit_rec(num//base, base)
+    t.append(num % base)
+    return t
 
 def digit_sum(num, base):
   """
